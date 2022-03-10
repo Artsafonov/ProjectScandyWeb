@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en"
+      xmlns:th="http://www.thymeleaf.org">
+<head>
+  <meta charset="UTF-8">
+  <title>Product Add</title>
+
+</head>
+<body>
+<h1 style="text-align: center"> Product Add </h1>
+<div style="width:100%;
+border-top:3px solid #9EC1D4"/>
+<br><br>
+<form  action="/page2" method="post" enctype="multipart/form-data">
+    <div> <input type="text" placeholder="scu" list="scu" name="scu"/>
+    <datalist id="scu">
+      <option th:each="el : ${scu}" th:value="${el}">
+    </datalist></div>
+  <br><br>
+  <div><input type="text" placeholder="productName" id="productName" name="productName"> </div>
+  <br><br>
+  <div> <input type="number" placeholder="price" id="price" name="price"> </div>
+  <br><br>
+  <input type="text" placeholder="productType" list="productType" name="productType"/>
+  <datalist id="productType">
+    <option th:each="el : ${productType}" th:value="${el}">
+  </datalist>
+  <br><br><br><br>
+  <input type="text" placeholder="productParameters" list="productParameters" name="productParameters"/>
+  <datalist id="productParameters">
+    <option th:each="el : ${productParameters}" th:value="${el}">
+  </datalist>
+  <br><br>
+
+  <div> <input type="number" placeholder="parameterValue" id="parameterValue" name="parameterValue"> </div>
+  <br><br>
+
+
+  <button type="submit"> Add product </button>
+
+</form>
+
+
+
+
+
+</body>
+</html>
